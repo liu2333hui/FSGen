@@ -1,7 +1,7 @@
 
 # FSGen: Agile Fused and Sparse Accelerator Generator with Accurate Power Model for LLM Applications
 
-<img src="LogoFsgen.png" alt="Your Project Logo" width="200" />
+<img src="LogoFsgen.png" alt="Your Project Logo" width="400" />
 
 ## Introduction and Motivation
 

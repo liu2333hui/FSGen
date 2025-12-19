@@ -68,7 +68,9 @@ val PSoftmaxFrac = HardwareConfig.get("PSoftmaxFrac").getOrElse("").toInt
 	
 val PV = HardwareConfig.get("PV").getOrElse("").toInt
 ```	
+
 ### Systolic Behavior
+
 ```scala
 val XqNet = HardwareConfig.get("XqNet").getOrElse("") // MC, SYS
 val XkNet = HardwareConfig.get("XkNet").getOrElse("") // MC, SYS
@@ -87,7 +89,9 @@ val PNet = HardwareConfig.get("PNet").getOrElse("") // MC, SYS
 ```
 
 ### Loop Order Configuration
+
 Because the hardware can have configurable loop order, for simulation purposes, we set the loop order in the simulation code, found in ```AttentionUnitSpec.scala```
+
 ```scala
 //Output stationary
 for(b <- 0 until DimB by SB){

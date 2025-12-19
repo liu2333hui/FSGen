@@ -1,6 +1,8 @@
 
 # FSGen: Agile Fused and Sparse Accelerator Generator with Accurate Power Model for LLM Applications
 
+![FSGEN](LogoFsgen.png)
+
 ## Introduction and Motivation
 
 LLM accelerators are becoming important and need specialized hardware to deliver the high performance and efficient energy requirements. The design space of modern AI chips considering sparsity, fused operation and dataflow becoming highly complex and diverse. As a result, our project FSGen provides an agile accelerator generation framework in Chisel for LLM accelerators, generating RTL code from Chisel.

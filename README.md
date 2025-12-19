@@ -25,7 +25,7 @@ Install SBT and Java
 
 We given an example of configuring a multi-head attention fused operator dataflow unit. ```AttentionUnit.scala``` is configured by sparsity, dataflow and other parameters. Dataflow parameters include:
 
-###Tilings
+### Tilings
 ```scala
 //Primary Tilings
 val B1 = HardwareConfig.get("B1").getOrElse("").toInt
@@ -49,7 +49,7 @@ val O3 = HardwareConfig.get("O3").getOrElse("").toInt
 val E3 = HardwareConfig.get("E3").getOrElse("").toInt
 ```
 
-###Precisions
+### Precisions
 ```scala
 //Precisions
 val PX  = HardwareConfig.get("PX").getOrElse("").toInt
@@ -66,7 +66,7 @@ val PSoftmaxFrac = HardwareConfig.get("PSoftmaxFrac").getOrElse("").toInt
 	
 val PV = HardwareConfig.get("PV").getOrElse("").toInt
 ```	
-###Systolic Behavior
+### Systolic Behavior
 ```scala
 val XqNet = HardwareConfig.get("XqNet").getOrElse("") // MC, SYS
 val XkNet = HardwareConfig.get("XkNet").getOrElse("") // MC, SYS
@@ -84,7 +84,7 @@ val ONet = HardwareConfig.get("ONet").getOrElse("") // MC, SYS
 val PNet = HardwareConfig.get("PNet").getOrElse("") // MC, SYS
 ```
 
-###Loop Order Configuration
+### Loop Order Configuration
 Because the hardware can have configurable loop order, for simulation purposes, we set the loop order in the simulation code, found in ```AttentionUnitSpec.scala```
 ```scala
 //Output stationary
@@ -97,7 +97,7 @@ for(e <- 0 until DimE by SE){
 ``` 
 
 
-###Sparsity Support
+### Sparsity Support
 The sparsity supported is configured based on flags, enable or disable, and common sparse mappings are supported. The threshold or ratios of sparsity should also be given when necessary, i.e., for winow attention, give the bounds.
 
 ```scala
@@ -117,7 +117,7 @@ val PhiWMem = HardwareConfig.get("PhiWMem").getOrElse("").toBool
 val WindowAttenMem = HardwareConfig.get("WindowAttenMem").getOrElse("").toBool
 ```
 
-###Other Parameters
+### Other Parameters
 
 Other parameters include sizing the queues and caches.
 ```scala
@@ -140,4 +140,14 @@ Apart from hardware generation, FSGen also supports early-stage power estimation
 val TestVectorMap = Helper.GenSimpleTrainingVectors(mode="bits_no_zero", p=8, dim=2)
 val TestVectorMap = Helper.GenSimpleTrainingVectors(mode="random", p=8, dim=2)
 ```
+Ensure that ```val EDAVerification = true```. 
 
+Once run, the results will be outputed in the ```generated``` folder.
+
+To train the ML estimators, for example for multipliers, run:
+```
+sbt "test:runMain multipliers.Multiplier2Spec"
+python3 src/main/python/train_primitives.py Multiplier2 train
+```
+
+This will train a space of mutlipliers and get their PPA (power, latency, area etc.) and train the primitives for each of these PPA.

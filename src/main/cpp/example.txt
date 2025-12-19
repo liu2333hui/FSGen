@@ -1,0 +1,2 @@
+H	HH	SH	SSH	N	NN	SN	SSN	B	BB	SB	SSB	M	MM	SM	SSM	D	DD	SD	SSD	O	OO	SO	SSO	PhiSpargAttenTopK	PhiSpargAttenTopKRatio	PhiX	PhiW	PhiXMem	PhiWMem	WindowAttenComp	WindowAttenMem	PE_MM1	PE_SM	PE_MM2	MemK	MemV	MemQ	MemPS	Xn	Xc	Xg	Xm	Xi	Xo	Wn	Wc	Wg	Wm	Wi	Wo	GXn	GXc	GXg	GXm	GXi	GXo	GWn	GWc	GWg	GWm	GWi	GWo	actual_cycles	utilization	runtime	mode	
+8	8	8	8	2	2	4	16	4	4	4	4	1	2	4	16	1	4	8	8	1	4	8	8	1	4.000000	1	1	1	1	1	1	512	16	512	10241024	1024	512	321	2	1	64	8	321	2	1	64	8	321	1	1	16	1	321	1	1	16	1	4102517993216	0.000004	4102.517993	0	

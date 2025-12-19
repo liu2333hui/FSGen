@@ -145,6 +145,7 @@ Ensure that ```val EDAVerification = true```.
 Once run, the results will be outputed in the ```generated``` folder.
 
 To train the ML estimators, for example for multipliers, run:
+
 ```
 sbt "test:runMain multipliers.Multiplier2Spec"
 python3 src/main/python/train_primitives.py Multiplier2 train

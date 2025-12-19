@@ -1,0 +1,28 @@
+[
+  {
+    "class":"logger.LogLevelAnnotation",
+    "globalLogLevel":{
+      
+    }
+  },
+  {
+    "class":"firrtl.options.TargetDirAnnotation",
+    "directory":"generated/MHAV1/MHAV1_2_8_1_8_2_2_MC_6_1_6_8_6_MC_2_8_1_MC_6_tsmc40_MC_2_2_8_MC_6_1_MC_2_MC_8_2__1_1.0_0.1"
+  },
+  {
+    "class":"firrtl.stage.phases.DriverCompatibility$TopNameAnnotation",
+    "topName":"MHAV1Spec"
+  },
+  {
+    "class":"firrtl.options.OutputAnnotationFileAnnotation",
+    "file":"MHA_V1"
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"generated/MHAV1/MHAV1_2_8_1_8_2_2_MC_6_1_6_8_6_MC_2_8_1_MC_6_tsmc40_MC_2_2_8_MC_6_1_MC_2_MC_8_2__1_1.0_0.1"
+  }
+]
